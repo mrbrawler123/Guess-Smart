@@ -2,16 +2,14 @@ import time
 import random
 print("GUESS SMART")
 time.sleep(2)
-print(
-    "You will be given some balance. I will think of a number. You have to guess a number. Then, the AI Bot will guess. The difference between the number I thought of and the number you and the AI Bot guessed will be subtracted from both players' balance. The first one to reach zero or go below it, loses. If both reach zero or go below it at the same time, then the one with higher points wins."
-)
+print("You will be given some balance. I will think of a number. You have to guess a number. Then, the AI Bot will guess. The difference between the number I thought of and the number you and the AI Bot guessed will be subtracted from both players' balance. The first one to reach zero or go below it, loses. If both reach zero or go below it at the same time, then the one with higher points wins.")
 time.sleep(2)
 balance = int(input("Enter the Starting Balance: "))
 time.sleep(1)
 limit = int(input("Enter the Limit for Numbers Possible: "))
 ai_balance = balance
 number = 0
-possible_numbers = list(range(limit + 1))
+possible_numbers = list(range(limit+1))
 while ai_balance > 0 and balance > 0:
 	number = random.choice(possible_numbers)
 	player_answer = int(input("Enter your guess: "))
